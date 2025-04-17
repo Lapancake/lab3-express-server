@@ -23,4 +23,5 @@ app.get('/api/items', async (req, res) => {
       res.status(500).send('Failed to add item');
     }
   });
-  
+
+  module.exports = router;

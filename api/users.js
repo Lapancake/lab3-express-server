@@ -1,4 +1,4 @@
-// Register user
+
 app.post('/api/users/register', async (req, res) => {
     const {
       first_name, last_name, id_number,
@@ -39,4 +39,4 @@ app.post('/api/users/register', async (req, res) => {
       res.status(500).send('Login failed');
     }
   });
-  
+  module.export = router;

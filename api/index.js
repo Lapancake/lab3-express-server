@@ -1,12 +1,10 @@
 const express = require('express');
 const { Pool } = require('pg');
+const serverless = require('serverless-http'); 
 require('dotenv').config();
 const cors = require('cors');
 
-
-
 const app = express();
-const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
@@ -27,4 +25,5 @@ app.get('/', async (req, res) => {
   }
 });
 
-module.exports = app;
+
+module.exports = serverless(app);
